@@ -1,6 +1,12 @@
+package com.mycompany.app;
+
 public class Pessoa {
     private String nome;
     private Livro[] listaLivros;
+
+    public Pessoa (String nome) {
+        this.nome = nome;
+    }
 
     public String getNome(){
         return nome;
@@ -15,6 +21,6 @@ public class Pessoa {
     }
 
     public void setLivros(Livro[] listaLivros){
-        this.livros = livros;
+        this.listaLivros = listaLivros;
     }
 }

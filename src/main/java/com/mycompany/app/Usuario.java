@@ -1,6 +1,13 @@
-public class Usuario extends Pessoa{
+package com.mycompany.app;
+
+public class Usuario extends Pessoa {
     private int idade;
-    private Emprestimo[] hist_emprestimo;
+    private Emprestimo[] histEmprestimo;
+
+    public Usuario(String nome, int idade){
+        super(nome); //busca o construtor da classe Pessoa
+        this.idade = idade;
+    }
 
     public int getIdade(){
         return idade;
@@ -10,11 +17,11 @@ public class Usuario extends Pessoa{
         this.idade = idade;
     }
 
-    public Emprestimo[] getHist_Emprestimo(){
-        return hist_emprestimo;
+    public Emprestimo[] getHistEmprestimo(){
+        return histEmprestimo;
     }
 
-    public void setHist_Emprestimo(Emprestimo[] hist_emprestimo){
-        this.hist_emprestimo = hist_emprestimo;
+    public void setHistEmprestimo(Emprestimo[] histEmprestimo){
+        this.histEmprestimo = histEmprestimo;
     }
 }

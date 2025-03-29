@@ -1,7 +1,13 @@
+package com.mycompany.app;
+
 public class Autor extends Pessoa {
     private String nacionalidade;
     private Livro[] obrasPublicadas;
-    private Livro[] obrasPublicadasPorGenero;
+
+    public Autor(String nome, String nacionalidade){
+        super(nome); //busca o construtor da classe Pessoa
+        this.nacionalidade = nacionalidade;
+    }
 
     public String getNacionalidade(){
         return nacionalidade;
@@ -17,13 +23,5 @@ public class Autor extends Pessoa {
 
     public void setObrasPublicadas(Livro[] obrasPublicadas){
         this.obrasPublicadas = obrasPublicadas;
-    }
-
-    public String getObrasPublicadasPorGenero(genero: String){
-        return obrasPublicadasPorGenero;
-    }
-
-    public void setObrasPublicadasPorGenero(Livro[] obrasPublicadasPorGenero){
-        this.obrasPublicadasPorGenero = obrasPublicadasPorGenero;
     }
 }

@@ -1,32 +1,41 @@
+package com.mycompany.app;
+
 import java.util.Date;
 
 public class Emprestimo {
-    private Date data_retirada;
-    private Date data_devolucao;
+    private Date dataRetirada;
+    private Date dataDevolucao;
     private Livro livro;
     private Usuario usuario;
 
-    public Date getData_Retirada(){
-        return data_retirada;
+    public Emprestimo(Date dataRetirada, Date dataDevolucao, Livro livro, Usuario usuario) {
+        this.dataDevolucao = dataDevolucao;
+        this.dataRetirada = dataRetirada;
+        this.livro = livro;
+        this.usuario = usuario;
     }
 
-    public void setData_Retirada(Date data_retirada){
-        this.data_retirada = data_retirada;
+    public Date getDataRetirada(){
+        return dataRetirada;
     }
 
-    public Date getData_Devolucao(){
-        return data_devolucao;
+    public void setDataRetirada(Date dataRetirada){
+        this.dataRetirada = dataRetirada;
     }
 
-    public void setData_Devolucao(Date data_devolucao){
-        this.data_devolucao = data_devolucao;
+    public Date getDataDevolucao(){
+        return dataDevolucao;
+    }
+
+    public void setDataDevolucao(Date dataDevolucao){
+        this.dataDevolucao = dataDevolucao;
     }
 
     public Livro getLivro(){
         return livro;
     }
 
-    public void setLivro(Livro[] livro){
+    public void setLivro(Livro livro){
         this.livro = livro;
     }
 
